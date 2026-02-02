@@ -107,6 +107,18 @@ double js_abs(double value_in);
 char js_Int_to_Char(int IntToConv);
 
 
+/*****************************************************************************
+ * This function converts an ASCII char between and including '0' and '9' to 
+ * its integer equivalent.
+ * @param	CharToConv is the char to convert
+ *
+ * @return	The converted integer value of the char
+ * 			Returns 0xEEEE if not a number.
+ *
+****************************************************************************/
+char js_Char_to_Int(char CharToConv);
+
+
 
 
 /************************   CONSTANT DEFINITIONS   ************************/
@@ -130,3 +142,4 @@ char js_Int_to_Char(int IntToConv);
 
 
 #endif //IFNDEF JS_UNIV_H
+
