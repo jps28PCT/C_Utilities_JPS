@@ -1,4 +1,4 @@
-# JPS Universal C Header
+# JPS Utilities C Header
 This is a C header and source file containing constants and functions I find myself copy-and-pasting from previous programs I wrote.
 
 This is intended for baremetal systems, where importing `<math.h>` may be undesirable.</br></br>
@@ -7,7 +7,7 @@ This is intended for baremetal systems, where importing `<math.h>` may be undesi
 <details>
 <summary> Functions </summary>
   
-## int js_Eng_Not(char returnStr[15], double inputNum, int sigFigs)<BR />
+## int jps_Eng_Not(char returnStr[15], double inputNum, int sigFigs)<BR />
 This function formats a double number in engineering notation, from yocto- (10<sup>-24</sup>) to yotta- (10<sup>24</sup>).<BR />
 String is 9 chars long, and is always right-justified so the prefix is always the 9th char.<BR />
 
@@ -23,7 +23,7 @@ String is 9 chars long, and is always right-justified so the prefix is always th
   - `"OutOfRng"` in `returnStr` if value not in range.
 
 
-## int js_Eng_Power(double inputNum)
+## int jps_Eng_Power(double inputNum)
 This function finds the power of 10 for the engineering notation formatting of doubles. <BR />
 The purpose of this function is to allow for specific formatting by only returning the exponent and allowing the formatting to be handled by the parent function.
 
@@ -34,7 +34,7 @@ The purpose of this function is to allow for specific formatting by only returni
 - integer exponent for engineering notation formatting
 
 
-## double js_Power(double base, int power)
+## double jps_Power(double base, int power)
 This function raises a double to an integer power and returns the product as a double.
 
 ### Inputs:
@@ -45,7 +45,7 @@ This function raises a double to an integer power and returns the product as a d
 - The value found by exponentiation (base^power).
 
 
-## double js_abs(double value)
+## double jps_abs(double value)
 This function returns the absolute value of a double.
 
 ### Inputs:
@@ -55,7 +55,7 @@ This function returns the absolute value of a double.
 - the absolute value of `value_in`; |`value_in`|
 
 
-## js_Int_to_Char(int IntToConv)
+## jps_Int_to_Char(int IntToConv)
 This function converts an integer between and including 0 and 9 to its ASCII char representation.
 
 ### Inputs:
@@ -65,7 +65,7 @@ This function converts an integer between and including 0 and 9 to its ASCII cha
 - The ASCII representation of the integer. Returns 'E' if greater than 9 or less than 0.
 
 
-## js_Char_to_Int(char CharToConv)
+## jps_Char_to_Int(char CharToConv)
 This function converts an ASCII char between and including '0' and '9' to its integer equivalent.
 
 ### Inputs:
