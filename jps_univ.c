@@ -22,7 +22,7 @@
  * 
 *******************************************************************************
  * 
- * This is the c source file to compliment the js_univ.c header file.
+ * This is the c source file to compliment the jps_univ.c header file.
  * This defines the functions declared there.
  * 
 ******************************************************************************/
@@ -288,5 +288,6 @@ char jps_Char_to_Int(char CharToConv){
 	return IntToRet;						//Returns ASCII char representation of int
 
 }//END jps_Int_to_Char()
+
 
 
