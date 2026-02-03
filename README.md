@@ -1,4 +1,4 @@
-# JPS Utilities C Header
+# C Utilities - J.P.S.
 This is a C header and source file containing constants and functions I find myself copy-and-pasting from previous programs I wrote.
 
 This is intended for baremetal systems, where importing `<math.h>` may be undesirable.</br></br>
