@@ -28,8 +28,8 @@
 ******************************************************************************/
 
 //FILE GUARD
-#ifndef JS_UNIV_H
-#define JS_UNIV_H
+#ifndef JPS_UNIV_H
+#define JPS_UNIV_H
 
 
 /*************************   FUNCTION PROTOTYPES   *************************/
@@ -52,7 +52,7 @@
  * @return	0 if a success, 1 if error (Significant figure not in range: 
  * 			"SigFigErr", value not in range: "OutOfRng")
 ****************************************************************************/
-int js_Eng_Not(char returnStr[15], double inputNum, int sigFigs);
+int jps_Eng_Not(char returnStr[15], double inputNum, int sigFigs);
 
 
 /*****************************************************************************
@@ -67,7 +67,7 @@ int js_Eng_Not(char returnStr[15], double inputNum, int sigFigs);
  *
  * @return	integer exponent for engineering notation formatting
 ****************************************************************************/
-int js_Eng_Power(double inputNum);
+int jps_Eng_Power(double inputNum);
 
 
 /*****************************************************************************
@@ -80,7 +80,7 @@ int js_Eng_Power(double inputNum);
  * @return	the value found by exponentiation (base^power). 
  *
 ****************************************************************************/
-double js_Power(double base, int power);
+double jps_Power(double base, int power);
 
 
 /*****************************************************************************
@@ -91,7 +91,7 @@ double js_Power(double base, int power);
  * @return	the absolute value of value_in, | value_in |
  *
 ****************************************************************************/
-double js_abs(double value_in);
+double jps_abs(double value_in);
 
 
 /*****************************************************************************
@@ -104,7 +104,7 @@ double js_abs(double value_in);
  * 			Returns 'E' if greater than 9 or less than 0.
  *
 ****************************************************************************/
-char js_Int_to_Char(int IntToConv);
+char jps_Int_to_Char(int IntToConv);
 
 
 /*****************************************************************************
@@ -116,7 +116,7 @@ char js_Int_to_Char(int IntToConv);
  * 			Returns 0xEEEE if not a number.
  *
 ****************************************************************************/
-char js_Char_to_Int(char CharToConv);
+char jps_Char_to_Int(char CharToConv);
 
 
 
@@ -141,5 +141,6 @@ char js_Char_to_Int(char CharToConv);
 
 
 
-#endif //IFNDEF JS_UNIV_H
+#endif //IFNDEF JPS_UNIV_H
+
 
