@@ -29,7 +29,7 @@
 
 /*******************************   INCLUDES   *******************************/
 #include <stdio.h>
-#include "js_univ.h"
+#include "jps_univ.h"
 
 
 /*************************   FUNCTION DEFINITIONS   *************************/
@@ -51,7 +51,7 @@
  * @return	0 if a success, 1 if error (Significant figure not in range: 
  * 			"SigFigErr", value not in range: "OutOfRng")
 ****************************************************************************/
-int js_Eng_Not(char returnStr[15], double inputNum, int sigFigs){
+int jps_Eng_Not(char returnStr[15], double inputNum, int sigFigs){
 	
 	/***** VARIABLE INITIALIZATION *****/
 	int exp = 0;							//Value of exponent (multiple of 3)
@@ -132,7 +132,7 @@ int js_Eng_Not(char returnStr[15], double inputNum, int sigFigs){
 	sprintf(returnStr, "%*.*f %c", sigFigs - numsAfterDecimal + 1, numsAfterDecimal, val, prefix);	//Formats number and prefix and writes it to returnStr
 	return 0;												//Return 0 for success
 
-}//END js_Eng_Not()
+}//END jps_Eng_Not()
 
 
 
@@ -149,7 +149,7 @@ int js_Eng_Not(char returnStr[15], double inputNum, int sigFigs){
  *
  * @return	integer exponent for engineering notation formatting
 ****************************************************************************/
-int js_Eng_Power(double inputNum){
+int jps_Eng_Power(double inputNum){
 	
 	/***** VARIABLE INITIALIZATION *****/
 	int exp = 0;
@@ -168,7 +168,7 @@ int js_Eng_Power(double inputNum){
 	}
 
 	return exp;
-}//END js_Eng_Power()
+}//END jps_Eng_Power()
 
 
 
@@ -183,7 +183,7 @@ int js_Eng_Power(double inputNum){
  * @return	the value found by exponentiation (base^power). 
  *
 ****************************************************************************/
-double js_Power(double base, int power){
+double jps_Power(double base, int power){
 	
 	/***** VARIABLE INITIALIZATION *****/
 	double product = 1.0;
@@ -210,7 +210,7 @@ double js_Power(double base, int power){
 
 	return product;		//Return calculated value of base^power
 
-}//END js_Power()
+}//END jps_Power()
 
 
 
@@ -230,7 +230,7 @@ double js_abs(double value){
 	else{
 		return value;
 	}
-}//END js_abs()
+}//END jps_abs()
 
 
 
@@ -244,7 +244,7 @@ double js_abs(double value){
  * 			Returns 'E' if greater than 9 or less than 0.
  *
 ****************************************************************************/
-char js_Int_to_Char(int IntToConv){
+char jps_Int_to_Char(int IntToConv){
 	
 	/***** VARIABLE INITIALIZATION *****/
 	char CharToRet;							//ASCII char representing the int
@@ -259,7 +259,7 @@ char js_Int_to_Char(int IntToConv){
 
 	return CharToRet;						//Returns ASCII char representation of int
 
-}//END js_Int_to_Char()
+}//END jps_Int_to_Char()
 
 
 
@@ -272,7 +272,7 @@ char js_Int_to_Char(int IntToConv){
  * 			Returns 0xEEEE if not a number.
  *
 ****************************************************************************/
-char js_Char_to_Int(char CharToConv){
+char jps_Char_to_Int(char CharToConv){
 	
 	/***** VARIABLE INITIALIZATION *****/
 	int IntToRet;							//ASCII char representing the int
@@ -287,5 +287,6 @@ char js_Char_to_Int(char CharToConv){
 
 	return IntToRet;						//Returns ASCII char representation of int
 
-}//END js_Int_to_Char()
+}//END jps_Int_to_Char()
+
 
